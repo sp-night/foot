@@ -1,0 +1,59 @@
+---
+spn:
+  version: "1.3.0"
+  matrix: [flavor]
+  filename: "themes/sp_night_{{ .Flavor }}.ini"
+---
+# SP Night — {{ .FlavorLabel }}
+# {{ .FlavorDesc }}
+#
+# Generated from the SP Night palette — do not edit by hand.
+# {{ .Repo }}
+#
+# install: {{ .Install }}
+# enable:  {{ .Activate }}   (in foot.ini; needs foot 1.26 or later)
+
+# foot wants bare RRGGBB, so every value drops the leading #. A key that takes two
+# colours reads them as text first, then background.
+[colors-dark]
+background={{ .R.ui.bg | nohash }}
+foreground={{ .R.ui.fg | nohash }}
+
+selection-foreground={{ .R.ui.fg | nohash }}
+selection-background={{ .R.ui.selection | nohash }}
+
+cursor={{ .R.ui.on_accent | nohash }} {{ .R.ui.cursor | nohash }}
+
+# URL mode. The underline is the link colour; the label to press is loud, dark text
+# on the signature colour.
+urls={{ .R.ui.link | nohash }}
+jump-labels={{ .R.ui.on_accent | nohash }} {{ .R.ui.accent | nohash }}
+
+# Scrollback search. A hit sits in the match colour; nothing found is an error, so
+# it borrows the diagnostic rather than an accent.
+search-box-match={{ .R.ui.on_accent | nohash }} {{ .R.ui.match | nohash }}
+search-box-no-match={{ .R.ui.on_accent | nohash }} {{ .R.diagnostic.error | nohash }}
+
+# The position readout recedes into the deepest surface.
+scrollback-indicator={{ .R.ui.fg_dim | nohash }} {{ .R.ui.bg_deep | nohash }}
+
+# A bell is a warning, not an accent.
+flash={{ .R.diagnostic.warn | nohash }}
+
+# The 16 ANSI colours, normal and bright paired.
+regular0={{ .R.ansi.black | nohash }}
+bright0={{ .R.ansi.bright_black | nohash }}
+regular1={{ .R.ansi.red | nohash }}
+bright1={{ .R.ansi.bright_red | nohash }}
+regular2={{ .R.ansi.green | nohash }}
+bright2={{ .R.ansi.bright_green | nohash }}
+regular3={{ .R.ansi.yellow | nohash }}
+bright3={{ .R.ansi.bright_yellow | nohash }}
+regular4={{ .R.ansi.blue | nohash }}
+bright4={{ .R.ansi.bright_blue | nohash }}
+regular5={{ .R.ansi.magenta | nohash }}
+bright5={{ .R.ansi.bright_magenta | nohash }}
+regular6={{ .R.ansi.cyan | nohash }}
+bright6={{ .R.ansi.bright_cyan | nohash }}
+regular7={{ .R.ansi.white | nohash }}
+bright7={{ .R.ansi.bright_white | nohash }}
