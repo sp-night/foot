@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">SP Night for <a href="https://codeberg.org/dnkl/foot">foot</a></h1>
+<h1 align="center">SP Night for <a href="https://codeberg.org/dnkl/foot">Foot</a></h1>
 
 <p align="center">
   <strong>The sodium lamp turns the whole city this colour.</strong><br>
@@ -33,21 +33,21 @@ palette itself, so they can never drift from what you install.
 
 The city at 3am. Blue-violet dark, the sodium lamp burning warm on top.
 
-![foot themed with SP Night Noite Paulista](assets/preview-noite.svg)
+![Foot themed with SP Night Noite Paulista](assets/preview-noite.svg)
 
 ### Garoa — `sp_night_garoa.ini`
 
 The same window, seen through the drizzle. Flat grey — the garoa does not cool
 the city down, it washes it out.
 
-![foot themed with SP Night Garoa](assets/preview-garoa.svg)
+![Foot themed with SP Night Garoa](assets/preview-garoa.svg)
 
 ### Pico do Jaraguá — `sp_night_jaragua.ini`
 
 The same night, seen from the city's highest point. Near-black surfaces, with
 the forest left to the accents — and the red-and-white tower lit at the summit.
 
-![foot themed with SP Night Pico do Jaraguá](assets/preview-jaragua.svg)
+![Foot themed with SP Night Pico do Jaraguá](assets/preview-jaragua.svg)
 
 ## Install
 
@@ -98,7 +98,7 @@ decoration rather than terminal colour. Set them in your own config.
 
 ## What gets themed
 
-| foot key | Role | Meaning |
+| Foot key | Role | Meaning |
 |---|---|---|
 | `regular0…7` / `bright0…7` | `ansi.*` | the full 16-colour ANSI mapping |
 | `background` / `foreground` | `ui.bg` / `ui.fg` | *laje* under the main text |
@@ -121,7 +121,7 @@ and enforced in CI.
 
 ## The mapping
 
-[`foot.ini.tmpl`](foot.ini.tmpl) is the full record of which foot key means which
+[`foot.ini.tmpl`](foot.ini.tmpl) is the full record of which Foot key means which
 role — the table above in complete form. The files in
 [`themes/`](themes) are what it resolves to, one per flavour.
 
